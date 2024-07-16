@@ -9,24 +9,6 @@ export default function Nav({ setScrolled, Scrolled }) {
         setIsMenuOpen(!isMenuOpen);
     };
 
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const offset = window.pageYOffset;
-            if (offset > 0) {
-                setScrolled(true);
-            } else if (offset === 0) {
-                setScrolled(false);
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, [Scrolled]);
-
-
     return (
         <nav className={Scrolled ? "border-gray-200 fixed w-full transition Scrolled" : "border-gray-200 transition"}>
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">

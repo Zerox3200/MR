@@ -1,19 +1,22 @@
-@use '../../helpers/functions' as *;
+@use "../../helpers/functions" as *;
 
 nav {
     background-color: black;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    width: 100%;
 
     h1 {
         margin-left: 0 !important;
-        color: rgba(white, 0.7);
+        color: white;
     }
 
-    &.Scrolled {
-        background-color: rgba(12, 11, 9, 0.6);
-    }
+    // &.Scrolled {
+    //     background-color: rgba(12, 11, 9, 0.6);
+    // }
 
     ul {
-
         @include Breakpoints(mobile) {
             direction: rtl;
         }
