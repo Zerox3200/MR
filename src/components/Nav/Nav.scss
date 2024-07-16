@@ -1,0 +1,50 @@
+@use '../../helpers/functions' as *;
+
+nav {
+    background-color: black;
+
+    h1 {
+        margin-left: 0 !important;
+        color: rgba(white, 0.7);
+    }
+
+    &.Scrolled {
+        background-color: rgba(12, 11, 9, 0.6);
+    }
+
+    ul {
+
+        @include Breakpoints(mobile) {
+            direction: rtl;
+        }
+
+        li {
+            p {
+                color: $BaseColor;
+                cursor: pointer;
+                position: relative;
+
+                &:hover {
+                    &::after {
+                        width: 100%;
+                        border-color: $BaseColor;
+                    }
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 0%;
+                    border: solid transparent 0.1px;
+                    bottom: -6px;
+                    right: 0;
+                    transition: linear all 0.3s;
+
+                    @include Breakpoints(mobile) {
+                        bottom: -3px;
+                    }
+                }
+            }
+        }
+    }
+}
