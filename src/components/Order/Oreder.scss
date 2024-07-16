@@ -1,0 +1,21 @@
+@use '../../helpers/functions' as *;
+
+.Order {
+    background-color: #f1f1f1;
+
+    form {
+        button {
+            width: 600px;
+            background-color: $BaseColor;
+            margin: auto;
+
+            @include Breakpoints(mobile) {
+                width: 90%;
+            }
+
+            &:hover {
+                background-color: rgba($BaseColor, 0.7);
+            }
+        }
+    }
+}

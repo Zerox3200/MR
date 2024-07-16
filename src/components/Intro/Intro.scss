@@ -1,0 +1,9 @@
+@use '../../helpers/functions' as *;
+
+.Intro {
+    direction: rtl;
+
+    h1 {
+        color: $BaseColor;
+    }
+}

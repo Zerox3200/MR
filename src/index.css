@@ -27,3 +27,11 @@ code {
   box-sizing: border-box;
   font-family: Cairo;
 }
+
+.opiniosTitle {
+  color: rgb(231 96 62);
+}
+
+.swal2-image {
+  object-fit: contain;
+}

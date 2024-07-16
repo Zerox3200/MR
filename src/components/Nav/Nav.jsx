@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './Nav.scss'
-import Logo from '../../Assets/Logo.png'
 
 export default function Nav({ setScrolled, Scrolled }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,8 +12,7 @@ export default function Nav({ setScrolled, Scrolled }) {
         <nav className={Scrolled ? "border-gray-200 fixed w-full transition Scrolled" : "border-gray-200 transition"}>
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <div className="flex flex-col justify-center items-center space-x-3 rtl:space-x-reverse">
-                    <img src={Logo} width={"120px"} height={"120px"} alt="Flowbite Logo" />
-                    <h1 className="text-h5 m-0">Ahmed Hanady</h1>
+                    <h1 className='text-xl mb-2'>ENGLISH<span className='logo_text'>IAno</span></h1>
                 </div>
                 <button
                     onClick={toggleMenu}

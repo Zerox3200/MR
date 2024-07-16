@@ -1,15 +1,26 @@
 @use "../../helpers/functions" as *;
 
 nav {
-    background-color: black;
+    background-color: white;
     z-index: 999;
     position: fixed;
     top: 0;
     width: 100%;
+    border-bottom: solid 1px;
+    border-color: $BaseColor !important;
 
     h1 {
-        margin-left: 0 !important;
-        color: white;
+        margin: 0 !important;
+        color: black;
+    }
+
+    h2 {
+        margin: 0 !important;
+        color: rgba(black, 0.6);
+    }
+
+    .logo_text {
+        color: $BaseColor;
     }
 
     // &.Scrolled {

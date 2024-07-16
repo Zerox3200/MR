@@ -2,16 +2,24 @@
 
 .slider-book {
     width: 100%;
-    margin-top: 120px;
+    margin-top: 60px;
+
     img {
-        height: 600px;
+        height: 800px;
         width: 90%;
-        object-fit: contain;
+        object-fit: cover;
+
+        @include Breakpoints(mobile) {
+            width: 100%;
+        }
+
     }
-    .slick-prev, .slick-next {
+
+    .slick-prev,
+    .slick-next {
         display: none !important;
     }
-    
+
 
     // .slick-prev {
     //     left: 30px;

@@ -1,0 +1,97 @@
+@use './../../helpers/functions' as *;
+
+.Question {
+    display: flex;
+    width: 70%;
+    height: max-content;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border: solid white 1px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 12px rgb(0 0 0 / 20%);
+    border-radius: 5px;
+    direction: rtl;
+
+    @include Breakpoints(mobile) {
+        width: 100%;
+    }
+
+    h5 {
+        display: flex;
+        column-gap: 2px;
+        width: 100%;
+        font-weight: lighter;
+        margin-bottom: 20px;
+        cursor: pointer;
+        @include Animtation(0.2s, linear, all);
+        position: relative;
+        margin: 0;
+
+        @include Breakpoints(small) {
+            font-size: 18px;
+        }
+
+        @include Breakpoints(mobile) {
+            width: 95%;
+            position: initial;
+        }
+
+        &.Showing {
+            color: $BaseColor;
+        }
+
+
+        svg {
+            position: absolute;
+            left: 0;
+            transform: rotate(-90deg);
+            @include Animtation(0.2s, linear, all);
+
+            &.Main {
+                transform: rotate(0deg);
+            }
+
+            @include Breakpoints(mobile) {
+                left: 4%;
+            }
+        }
+
+        span {
+            color: $BaseColor;
+            margin-right: 5px;
+        }
+
+
+        &:hover {
+            color: $BaseColor;
+        }
+    }
+
+    >span {
+        height: 0;
+        overflow: hidden;
+        padding-top: 0px;
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include Animtation(0.2s, linear, all);
+
+        @include Breakpoints(mobile) {
+            font-size: 15px;
+        }
+
+        &.Showing {
+            padding-top: 20px;
+            opacity: 1;
+            @include Animtation(0.2s, linear, all);
+
+            @include Breakpoints(mobile) {
+                height: max-content !important;
+            }
+        }
+
+    }
+}

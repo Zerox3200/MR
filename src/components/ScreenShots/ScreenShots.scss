@@ -1,0 +1,17 @@
+@use '../../helpers/functions' as *;
+
+
+.ScreenContainer {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+
+    transition: 0.3s linear all;
+    border: solid transparent 6px;
+
+
+    &:hover {
+        border-color: $BaseColor;
+    }
+}
