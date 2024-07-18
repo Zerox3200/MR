@@ -9,6 +9,7 @@
         height: 800px;
         width: 90%;
         object-fit: cover;
+        margin: auto;
 
 
         @include Breakpoints(mobile) {

@@ -1,19 +1,23 @@
-import React, { useState } from 'react';
+import React, {  useState } from 'react';
 import './Nav.scss'
 
 export default function Nav({ setScrolled, Scrolled }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
-
-    return (
+   
+    return (<>
+        <h1 className='sponser'>
+            الكتاب الأكثر مبيعا في الوطن العربي لتعليم اللغه الإنجليزية
+        </h1>
         <nav className={Scrolled ? "border-gray-200 fixed w-full transition Scrolled" : "border-gray-200 transition"}>
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <div className="flex flex-col justify-center items-center space-x-3 rtl:space-x-reverse">
-                    <h1 className='text-xl mb-2 font-bold'>ENGLISH<span className='logo_text font-bold'>IAno</span></h1>
-                    <h1 className='text-sm mb-2 logo_text'>AHMED HANADY</h1>
+                    <h1 className='text-2xl mb-2 font-black text-left italic '>ENGLISH<span className='logo_text text-left text-2xl font-black'>IAno</span></h1>
+                    <h1 className='text-sm text-left font-bold mb-2 logo_name italic'>AHMED <span className=' italic '>HANADY</span> </h1>
                 </div>
                 <button
                     onClick={toggleMenu}
@@ -49,5 +53,6 @@ export default function Nav({ setScrolled, Scrolled }) {
                 </div>
             </div>
         </nav>
+    </>
     );
 }

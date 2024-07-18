@@ -1,0 +1,13 @@
+@use "../../helpers/functions.scss" as *;
+.footer-fixed {
+    position: fixed;
+    color: white;
+    bottom: 10px;
+    left: 19px;
+    width: 220px;
+    background-color: $BaseColor;
+    text-align: center;
+    padding: 15px;
+    border-radius: 50px;
+    z-index: 90;
+}

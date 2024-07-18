@@ -1,10 +1,19 @@
 @use "../../helpers/functions" as *;
+.sponser {
+    background-color: white;
+    color: black;
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    z-index: 999;
+    width: 100%;
+}
 
 nav {
     background-color: $BaseColor;
     z-index: 999;
     position: fixed;
-    top: 0;
+    top: 23px;
     width: 100%;
     border-bottom: solid 1px;
     border-color: $BaseColor !important;
@@ -19,13 +28,16 @@ nav {
         color: rgba(black, 0.6);
     }
 
-    .logo_text {
+    .logo_name {
         color: black;
+        margin-top: 0px;
+        line-height: 5px;
     }
 
-    // &.Scrolled {
-    //     background-color: rgba(12, 11, 9, 0.6);
-    // }
+    .logo_text {
+        color: black;
+        margin-bottom: 0px;
+    }
 
     ul {
         @include Breakpoints(mobile) {
@@ -41,7 +53,7 @@ nav {
                 &:hover {
                     &::after {
                         width: 100%;
-                        border-color: $BaseColor;
+                        border-color: white;
                     }
                 }
 
