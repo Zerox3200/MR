@@ -1,24 +1,18 @@
 import './Intro.scss';
-import { TypeAnimation } from 'react-type-animation';
-
-
 export default function Intro() {
 
 
     return <div className='mt-6 Intro p-2'>
         <h1 className='text-2xl text-center mt-5 font-bold leading-10'>
-            <TypeAnimation
-                sequence={['لية مجموعة كتب ENGLISHIANO؟', 500, 'لانها الافضل في مصر والوطن العربي', 500,]}
-                style={{ fontSize: '1em' }}
-                repeat={Infinity}
-            />
+            ليه مجموعة كتب ENGLISHIANO لانها الافضل في مصر والوطن العربي ؟
         </h1>
 
         <h1 className='text-2xl text-center mt-9'>
             محتويات كتاب إنجلشيانو
         </h1>
 
-        <ul className="space-y-1 list-disc list-inside mt-3">
+        <ul className="space-y-1 list-disc list-inside mt-3 mb-3 text-gray-600">
+
             <div className='flex'>
                 <li>
                 </li>
@@ -83,22 +77,22 @@ export default function Intro() {
             <div className="flex">
                 <li>
                 </li>
-                <span>
+                <span className='mb-7'>
                     الكتاب مناسب لكل الأعمار و المستويات و طلاب و خريجي الجامعات و جميع مراحل التعليم من الإبتدائي حتي الثانوي و أولياء الأمور.
                 </span>
             </div>
         </ul>
 
-        <h1 className='text-2xl text-center mt-7'>
+        <h1 className='text-2xl text-center mt-7 mb-4'>
             بوكليت إنجلشيانو جرامر
         </h1>
 
-        <ul className="space-y-1 list-disc list-inside mt-2">
+        <ul className="space-y-1 list-disc list-inside mt-2 text-gray-600">
             <div className="flex">
                 <li>
 
                 </li>
-                <span>و اللي فيه هتتعلم أهم قواعد الجرامر في اللغة الإنجليزية بداية من إزاي تكون جملة و أجزاء الكلام و جميع الأزمنة و الروابط و الدروس اللي هتساعدك تخلي الكلام يتكون لوحده بشكل مرتب و منظم و كمان بعد كل درس هتلاقي تدريبات مهمة عليه بالإجابات.
+                <span className='mb-7'>و اللي فيه هتتعلم أهم قواعد الجرامر في اللغة الإنجليزية بداية من إزاي تكون جملة و أجزاء الكلام و جميع الأزمنة و الروابط و الدروس اللي هتساعدك تخلي الكلام يتكون لوحده بشكل مرتب و منظم و كمان بعد كل درس هتلاقي تدريبات مهمة عليه بالإجابات.
                 </span>
             </div>
         </ul>
@@ -108,7 +102,7 @@ export default function Intro() {
         </h1>
 
         <ul className="space-y-1 list-disc list-inside mt-2">
-            <div className="flex">
+            <div className="flex text-gray-600">
                 <li>
                 </li>
                 <span>
