@@ -1,7 +1,7 @@
 @use "../../helpers/functions" as *;
 
 nav {
-    background-color: white;
+    background-color: $BaseColor;
     z-index: 999;
     position: fixed;
     top: 0;
@@ -11,7 +11,7 @@ nav {
 
     h1 {
         margin: 0 !important;
-        color: black;
+        color: white;
     }
 
     h2 {
@@ -20,7 +20,7 @@ nav {
     }
 
     .logo_text {
-        color: $BaseColor;
+        color: black;
     }
 
     // &.Scrolled {
@@ -34,7 +34,7 @@ nav {
 
         li {
             p {
-                color: $BaseColor;
+                color: white;
                 cursor: pointer;
                 position: relative;
 

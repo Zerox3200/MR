@@ -13,8 +13,8 @@ export default function Landing() {
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
-        speed: 700,
-        autoplaySpeed: 1200,
+        speed: 1000,
+        autoplaySpeed: 4000,
         prevArrow: null,
         nextArrow: null,
         responsive: [
