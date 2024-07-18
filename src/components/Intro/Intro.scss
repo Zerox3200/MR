@@ -1,6 +1,9 @@
-@use '../../helpers/functions' as *;
+@use "../../helpers/functions" as *;
 
 .Intro {
+    ul {
+        line-height: 35px;
+    }
     direction: rtl;
 
     h1 {
