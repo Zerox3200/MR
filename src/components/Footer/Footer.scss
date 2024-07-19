@@ -1,21 +1,21 @@
 @use "../../helpers/functions.scss" as *;
+
 @keyframes buttonupdown {
     0% {
-        bottom: 15px;
+        bottom: 10px;
         background-color: green;
     }
-    25% {
-        bottom: 25px;
-        background-color: rgba(0, 128, 0, 0.851);
-    }
-    50% {
-        bottom: 30px;
-        background-color: rgba(0, 128, 0, 0.712);
-    }
-    75% {
-        bottom: 25px;
+
+    40% {
+        bottom: 33px;
         background-color: rgba(0, 128, 0, 0.696);
     }
+
+    60% {
+        bottom: 33px;
+        background-color: rgba(0, 128, 0, 0.696);
+    }
+
     100% {
         bottom: 10px;
         background-color: rgba(0, 128, 0, 0.592);
