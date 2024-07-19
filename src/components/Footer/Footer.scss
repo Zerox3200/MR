@@ -1,13 +1,40 @@
 @use "../../helpers/functions.scss" as *;
+@keyframes buttonupdown {
+    0% {
+        bottom: 15px;
+        background-color: green;
+    }
+    25% {
+        bottom: 25px;
+        background-color: rgba(0, 128, 0, 0.851);
+    }
+    50% {
+        bottom: 30px;
+        background-color: rgba(0, 128, 0, 0.712);
+    }
+    75% {
+        bottom: 25px;
+        background-color: rgba(0, 128, 0, 0.696);
+    }
+    100% {
+        bottom: 10px;
+        background-color: rgba(0, 128, 0, 0.592);
+    }
+}
+
 .footer-fixed {
     position: fixed;
     color: white;
     bottom: 10px;
     left: 19px;
     width: 220px;
-    background-color: $BaseColor;
+    // background-color: $BaseColor;
     text-align: center;
     padding: 15px;
     border-radius: 50px;
     z-index: 90;
+    animation-name: buttonupdown;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }

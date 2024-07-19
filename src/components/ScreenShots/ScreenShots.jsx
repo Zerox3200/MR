@@ -16,7 +16,7 @@ export default function ScreenShots() {
     };
 
     return <>
-        <div className="back-section">
+        <div className="back-section" id='opnion'>
             <h1 className='text-center mt-10 opiniosTitle text-2xl'>ENGLISHIANO اراء عملاء</h1>
             <div className="grid grid-cols-1 md:grid-cols-10 gap-4 px-10 mt-10">
                 {ScreenImages.map((screens) => <div className='ScreenContainer rounded-lg flex items-center' key={screens.id} onClick={() => ScreenDetails(screens.screen)}>
