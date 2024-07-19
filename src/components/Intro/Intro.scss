@@ -10,3 +10,18 @@
         color: $BaseColor;
     }
 }
+.offer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(0, 128, 0, 0.855);
+    border-radius: 20px;
+    margin: auto;
+    width: 80%;
+    h1 {
+        padding: 8px;
+        display: inline;
+        color: white;
+        text-align: center;
+    }
+}

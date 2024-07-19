@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import './Oreder.scss'
 import { useFormik } from 'formik'
 import { useInView, motion } from 'framer-motion'
+import { Label, Textarea } from 'flowbite-react';
 
 export default function Order() {
 
@@ -18,7 +19,7 @@ export default function Order() {
     });
 
     return <div className='Order py-6' id='order'>
-        <h1 className='text-2xl text-center'>حجز كتاب</h1>
+        <h1 className='text-2xl text-center'> احجز الكتاب الأن</h1>
 
         <form onSubmit={formik.handleSubmit} className='text-right mt-10 flex flex-col justify-center'>
 
@@ -57,12 +58,27 @@ export default function Order() {
                         transition={{ duration: 0.8, type: "spring", delay: 0.4 }} />
                 </div>
 
+                <div>
+                    <label htmlFor="phone" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">رقم تليفون اخر</label>
+                    <motion.input type="tel" id="phone" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500
+                     focus:border-blue-500 block w-full p-2.5" placeholder="123-45-678"
+                        pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required initial={{ opacity: 0, y: 10 }}
+                        animate={InView && { opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, type: "spring", delay: 0.4 }} />
+                </div>
+
+                <div>
+                    <label htmlFor="phone" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ملاحظات اخري</label>
+                    <Textarea id="comment" placeholder="ملاحظات" required rows={4} />
+                </div>
+
             </div>
 
             <motion.button type="submit" className="text-white bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300
              font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center transition" initial={{ opacity: 0, y: 10 }}
                 animate={InView && { opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, type: "spring", delay: 0.6 }} >اطلب الان</motion.button>
+
         </form>
 
 

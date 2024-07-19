@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import './Intro.scss';
 import { motion, useInView } from 'framer-motion';
+import { Link } from 'react-router-dom';
 export default function Intro() {
     const Title = useRef();
     const Title2 = useRef();
@@ -18,8 +19,29 @@ export default function Intro() {
     const InView6 = useInView(Title4, { once: true })
     const InView7 = useInView(Title5, { once: true })
 
-
+    const scrollToSection3 = (e) => {
+        e.preventDefault();
+        const section = document.getElementById('order');
+        if (section) {
+            const offsetTop = section.getBoundingClientRect().top + window.scrollY;
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    };
     return <div className='mt-6 Intro p-2'>
+        <div className="offer">
+            <h1>
+                299ج بدلا من  <del>600ج</del> عرض لمدة 24 ساعة والشحن مجانا لاي مكان في مصر
+            </h1>
+            <br />
+            <Link to={"/#order"} onClick={scrollToSection3}>
+                <u>
+                    <span> اطلب الان من هنا </span>
+                </u>
+            </Link>
+        </div>
         <motion.h1 className='text-2xl text-center mt-5 font-bold leading-10'
             initial={{ opacity: 0 }} animate={InView && { opacity: 1 }} transition={{ type: "spring", duration: "1" }}
             ref={Title}>
