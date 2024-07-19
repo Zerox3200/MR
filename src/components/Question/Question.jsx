@@ -6,7 +6,7 @@ import { useAnimate, motion, useInView } from "framer-motion";
 export function Question({ number, title, desc, Delay }) {
     const ref = useRef()
     const InView = useInView(ref, { once: true });
-    const [ShowQuestion, setShowQuestion] = useState(false);
+    const [ShowQuestion, setShowQuestion] = useState(true);
     const [Show, animate] = useAnimate();
 
     const QuestionHandler = () => {
@@ -23,7 +23,7 @@ export function Question({ number, title, desc, Delay }) {
     }
     return (
         <motion.div className="Question mt-10" ref={ref}
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0 , y: 40 }}
             animate={InView && { opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'linear', delay: parseFloat(Delay) }}
         >

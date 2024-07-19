@@ -4,7 +4,7 @@ export default function Intro() {
 
     return <div className='mt-6 Intro p-2'>
         <h1 className='text-2xl text-center mt-5 font-bold leading-10'>
-            ليه مجموعة كتب ENGLISHIANO لانها الافضل في مصر والوطن العربي ؟
+     ليه مجموعة كتب ENGLISHIANO الكثر مبيعا في مصر والوطن العربي ؟
         </h1>
 
         <h1 className='text-2xl text-center mt-9'>

@@ -1,22 +1,61 @@
-import React, {  useState } from 'react';
+import React, { useState } from 'react';
 import './Nav.scss'
-
+import { Link } from 'react-router-dom';
 export default function Nav({ setScrolled, Scrolled }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    
+
+    const scrollToSection = (id) => {
+        const specificSection = document.getElementById('opnion');
+        window.scrollTo({
+            behavior: 'smooth',
+            top: specificSection.offsetTop,
+        });
+    };
+    const scrollToSection2 = (id) => {
+        const specificSection = document.getElementById('question');
+        window.scrollTo({
+            behavior: 'smooth',
+            top: specificSection.offsetTop,
+        });
+    };
+    const scrollToSection3 = (id) => {
+        const specificSection = document.getElementById('order');
+        window.scrollTo({
+            behavior: 'smooth',
+            top: specificSection.offsetTop,
+        });
+    };
+
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
-   
+
     return (<>
         <h1 className='sponser'>
-            الكتاب الأكثر مبيعا في الوطن العربي لتعليم اللغه الإنجليزية
+            <marquee behavior="alternate" scrolldelay="50" direction="left">
+                <div className="flex gap-x-1">
+                    {/* <span>
+                        الأكثر مبيعا في مصر والوطن العربي
+                    </span>
+                    <span>
+                        ELNGLISHIANO
+
+                    </span>
+                    <span>
+                        مجموعة كتب
+                    </span> */}
+                    <span>
+                        الكتب الاكثر مبيعا في مصر والوطن العربي 
+                    </span>
+
+                </div>
+            </marquee>
         </h1>
         <nav className={Scrolled ? "border-gray-200 fixed w-full transition Scrolled" : "border-gray-200 transition"}>
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <div className="flex flex-col justify-center items-center space-x-3 rtl:space-x-reverse">
-                    <h1 className='text-2xl mb-2 font-black text-left italic '>ENGLISH<span className='logo_text text-left text-2xl font-black'>IAno</span></h1>
+                    <h1 className='text-3xl mb-2 font-black text-left italic '>ENGLISH<span className='text-left text-3xl font-black'>IANO</span></h1>
                     <h1 className='text-sm text-left font-bold mb-2 logo_name italic'>AHMED <span className=' italic '>HANADY</span> </h1>
                 </div>
                 <button
@@ -35,20 +74,28 @@ export default function Nav({ setScrolled, Scrolled }) {
                     <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg 
                      md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0
                      dark:border-gray-700">
-                        <li>
-                            <p className="block py-2 px-3 rounded md:bg-transparent md:p-0 dark:text-white" aria-current="page">
-                                الأراء</p>
-                        </li>
-                        <li>
-                            <p className="block py-2 px-3 rounded md:bg-transparent md:p-0 dark:text-white" aria-current="page">
-                                الأسئله الشائعه
-                            </p>
-                        </li>
-                        <li>
-                            <p className="block py-2 px-3 rounded md:bg-transparent md:p-0 dark:text-white" aria-current="page">
-                                أطلب الأن
-                            </p>
-                        </li>
+                        <Link to="/#opnion" onClick={scrollToSection}>
+                            <li>
+                                <p className="block py-2 px-3 rounded md:bg-transparent md:p-0 dark:text-white" aria-current="page">
+                                    الأراء</p>
+                            </li>
+                        </Link>
+                        <Link to="/#" onClick={scrollToSection2}>
+                            <li>
+                                <p className="block py-2 px-3 rounded md:bg-transparent md:p-0 dark:text-white" aria-current="page">
+                                    الأسئله الشائعه
+                                </p>
+                            </li>
+                        </Link>
+
+                        <Link to="/#order" onClick={scrollToSection3}>
+                            <li>
+                                <p className="block py-2 px-3 rounded md:bg-transparent md:p-0 dark:text-white" aria-current="page">
+                                    أطلب الأن
+                                </p>
+                            </li>
+                        </Link>
+
                     </ul>
                 </div>
             </div>
