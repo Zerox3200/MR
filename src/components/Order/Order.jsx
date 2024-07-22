@@ -19,7 +19,7 @@ export default function Order() {
     });
 
     return <div className='Order py-6' id='order'>
-        <h1 className='text-2xl text-center'> احجز الكتاب الأن</h1>
+        <h1 className='text-2xl text-center'> أطلب الأن من هنا</h1>
 
         <form onSubmit={formik.handleSubmit} className='text-right mt-10 flex flex-col justify-center'>
 
@@ -77,7 +77,7 @@ export default function Order() {
             <motion.button type="submit" className="text-white bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300
              font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center transition" initial={{ opacity: 0, y: 10 }}
                 animate={InView && { opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, type: "spring", delay: 0.6 }} >اطلب الان</motion.button>
+                transition={{ duration: 0.8, type: "spring", delay: 0.6 }} >اطلب الأن</motion.button>
 
         </form>
 

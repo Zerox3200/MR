@@ -33,19 +33,19 @@ export default function Intro() {
     return <div className='mt-6 Intro p-2'>
         <div className="offer">
             <h1>
-                299ج بدلا من  <del>600ج</del> عرض لمدة 24 ساعة والشحن مجانا لاي مكان في مصر
+                299ج بدلا من  <del>600ج</del> عرض لمدة 24 ساعة  و الشحن مجاناً لأي مكان في مصر
             </h1>
             <br />
             <Link to={"/#order"} onClick={scrollToSection3}>
                 <u>
-                    <span> اطلب الان من هنا </span>
+                    <span> أطلب الأن من هنا </span>
                 </u>
             </Link>
         </div>
-        <motion.h1 className='text-2xl text-center mt-5 font-bold leading-10'
+        <motion.h1 className='text-xl text-center mt-5 font-bold leading-10'
             initial={{ opacity: 0 }} animate={InView && { opacity: 1 }} transition={{ type: "spring", duration: "1" }}
             ref={Title}>
-            ليه مجموعة كتب ENGLISHIANO الكثر مبيعا في مصر والوطن العربي ؟
+            ليه مجموعة كتب ENGLISHIANO الأكثر مبيعاً في مصر  و الوطن العربي ؟
         </motion.h1>
 
         <motion.h1 className='text-2xl text-center mt-9' initial={{ opacity: 0, y: 10 }}

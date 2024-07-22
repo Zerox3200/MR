@@ -1,5 +1,11 @@
 @use "../../helpers/functions" as *;
 
+.sweet {
+    background-color: $BaseColor;
+}
+.sweet-button {
+    color: $BaseColor;
+}
 .slider-book {
     width: 100%;
     // margin-top: 60px;
@@ -10,7 +16,6 @@
         width: 90%;
         object-fit: cover;
         margin: auto;
-
 
         @include Breakpoints(mobile) {
             width: 100%;

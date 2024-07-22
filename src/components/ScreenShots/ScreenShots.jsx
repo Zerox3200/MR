@@ -3,10 +3,11 @@ import { ScreenImages } from './ScreenShotsimages'
 import Swal from 'sweetalert2';
 import './ScreenShots.scss';
 import { motion, useInView } from 'framer-motion';
+import Slider from 'react-slick';
 
 export default function ScreenShots() {
-    const Images = useRef();
-    const InView = useInView(Images, { once: true });
+    // const Images = useRef();
+    // const InView = useInView(Images, { once: true });
 
     const ScreenDetails = (screen) => {
         Swal.fire({
@@ -17,9 +18,47 @@ export default function ScreenShots() {
             showCloseButton: true
         })
     };
+    const settings = {
+        className: 'slider-book',
+        dots: true,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 1000,
+        autoplaySpeed: 4000,
+        prevArrow: null,
+        nextArrow: null,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    };
 
     return <>
-        <div className="back-section" id='opnion' ref={Images}>
+        {/* <div className="back-section" id='opnion' ref={Images}>
             <h1 className='text-center mt-10 opiniosTitle text-2xl'>ENGLISHIANO اراء عملاء</h1>
             <div className="grid grid-cols-1 md:grid-cols-10 gap-4 px-10 mt-10">
                 {ScreenImages.map((screens, index) => <motion.div className='ScreenContainer rounded-lg flex items-center'
@@ -30,7 +69,18 @@ export default function ScreenShots() {
                 </motion.div>)}
 
             </div>
-        </div>
+        </div> */}
+
+
+        <div className="slider-container-screens " >
+            <Slider {...settings}>
+                {ScreenImages.map((screens) => <div key={screens.id}>
+                    <img src={screens.screen} alt="..." loading='lazy' onClick={() => ScreenDetails(screens.screen)} />
+                </div>)}
+
+            </Slider>
+        </div >
+
     </>
 
 

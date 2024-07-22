@@ -4,6 +4,7 @@
     background-color: #f1f1f1;
     position: relative;
     z-index: 100;
+    margin-top: 46px;
     h1 {
         color: $BaseColor;
     }
@@ -11,7 +12,7 @@
     form {
         button {
             width: 600px;
-            background-color: $BaseColor;
+            background-color: green;
             margin: auto;
 
             @include Breakpoints(mobile) {

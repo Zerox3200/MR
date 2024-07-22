@@ -46,7 +46,7 @@ export default function Nav({ setScrolled, Scrolled }) {
                         مجموعة كتب
                     </span> */}
                     <span>
-                        الكتب الاكثر مبيعا في مصر والوطن العربي 
+                        الكتب الأكثر مبيعاً في مصر  و الوطن العربي 
                     </span>
 
                 </div>
