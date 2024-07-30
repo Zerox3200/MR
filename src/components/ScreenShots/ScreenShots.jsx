@@ -1,8 +1,7 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import { ScreenImages } from './ScreenShotsimages'
 import Swal from 'sweetalert2';
 import './ScreenShots.scss';
-import { motion, useInView } from 'framer-motion';
 import Slider from 'react-slick';
 
 export default function ScreenShots() {
@@ -22,8 +21,8 @@ export default function ScreenShots() {
         className: 'slider-book',
         dots: true,
         infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
+        slidesToShow: 2,
+        slidesToScroll: 2,
         autoplay: true,
         speed: 1000,
         autoplaySpeed: 4000,
@@ -36,7 +35,7 @@ export default function ScreenShots() {
                     slidesToShow: 3,
                     slidesToScroll: 3,
                     infinite: true,
-                    dots: true
+                    dots: false
                 }
             },
             {
@@ -44,14 +43,16 @@ export default function ScreenShots() {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    initialSlide: 1
+                    initialSlide: 1,
+                    dots: false
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    dots: false
                 }
             }
         ]
@@ -79,6 +80,7 @@ export default function ScreenShots() {
                 </div>)}
 
             </Slider>
+
         </div >
 
     </>

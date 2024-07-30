@@ -46,7 +46,7 @@ export default function Footer() {
     return <>
         <Link to="/#order" onClick={scrollToSection3}>
             <div className='footer-fixed'>
-                <button>اطلب الأن من هنا</button>
+                <button>اطلب الآن من هنا و استفيد بالشحن المجاني</button>
             </div>
         </Link>
     </>

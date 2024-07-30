@@ -18,6 +18,9 @@
 .slider-container-screens {
     width: 100%;
     height: 900px;
+    @include Breakpoints(mobile) {
+        height: 600px;
+    }
     img {
         object-fit: contain;
         width: 100%;

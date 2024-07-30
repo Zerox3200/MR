@@ -1,11 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Landing.scss'
 import Slider from "react-slick";
 import { Images } from './Images';
 import Swal from 'sweetalert2';
+import { FaEye } from "react-icons/fa";
 
 
 export default function Landing() {
+    const [visitorCount, setVisitorCount] = useState(Math.floor(Math.random() * 20));
+    const min = 30;
+    const max = 100;
+    useEffect(() => {
+        setInterval(() => {
+            const initialViews = Math.floor(Math.random() * (max - min + 1)) + min; // Replace with actual data fetching
+            setVisitorCount(initialViews);
+        }, 4000);
+    }, [])
+
     const ScreenDetails = (screen) => {
         Swal.fire({
             imageUrl: screen,
@@ -65,5 +76,13 @@ export default function Landing() {
             </div>)}
 
         </Slider>
+        <h4 className='bg-orange-300 flex items-center'>
+            <FaEye />
+            <span>
+                {visitorCount}
+            </span>
+            <span className='flex items-center gap-2'>
+                يشاهد الأن</span>
+        </h4>
     </div >
 }

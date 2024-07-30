@@ -27,7 +27,10 @@
     color: white;
     bottom: 10px;
     left: 19px;
-    width: 220px;
+    width: 340px;
+    @include Breakpoints(mobile) {
+        width: 90%;
+    }
     // background-color: $BaseColor;
     text-align: center;
     padding: 15px;
