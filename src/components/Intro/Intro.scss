@@ -24,7 +24,25 @@
         color: white;
         text-align: center;
     }
-    u{
+    u {
         color: $BaseColor;
+    }
+}
+.vistor {
+    h4 {
+        direction: rtl !important;
+        padding: 10px 40px 10px 0px;
+        text-align: start;
+        margin-top: 40px;
+        color: black;
+        background-color: #fef2e6;
+        transition: 1s liner all;
+        span {
+            padding: 5px;
+        }
+        svg {
+            color: #dc7e0f;
+            font-size: 20px;
+        }
     }
 }

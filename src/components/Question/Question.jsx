@@ -31,25 +31,25 @@ export function Question({ number, title, desc, desc1, desc2, desc3, Delay }) {
                 {title}
                 <FaAngleRight className={ShowQuestion ? 'Main' : ''} /></h5>
 
-            {desc && <span className={ShowQuestion ? 'Showing' : 'span-non'} ref={Show}>
+            {desc && <span className={ShowQuestion ? 'Showing text-gray-600' : 'span-non'} ref={Show}>
                 {desc}
             </span>
             }
 
             {desc1 &&
-                <span className={ShowQuestion ? 'Showing' : 'span-non'} ref={Show}>
+                <span className={ShowQuestion ? 'Showing text-gray-600' : 'span-non'} ref={Show}>
                     {desc1}
                 </span>
             }
 
             {desc2 &&
-                <span className={ShowQuestion ? 'Showing' : 'span-non'} ref={Show}>
+                <span className={ShowQuestion ? 'Showing text-gray-600' : 'span-non'} ref={Show}>
                     {desc2}
                 </span>
             }
 
             {desc3 &&
-                <span className={ShowQuestion ? 'Showing' : 'span-non'} ref={Show}>
+                <span className={ShowQuestion ? 'Showing text-gray-600' : 'span-non'} ref={Show}>
                     {desc3}
                 </span>
             }

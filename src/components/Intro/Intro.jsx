@@ -1,7 +1,9 @@
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './Intro.scss';
 import { motion, useInView } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { FaEye } from "react-icons/fa";
+
 export default function Intro() {
     const Title = useRef();
     const Title2 = useRef();
@@ -18,6 +20,17 @@ export default function Intro() {
     const InView5 = useInView(Description2, { once: true })
     const InView6 = useInView(Title4, { once: true })
     const InView7 = useInView(Title5, { once: true })
+
+    const min = 300;
+    const max = 500;
+    const [visitorCount, setVisitorCount] = useState(Math.floor(Math.random() * (max - min + 1)) + min);
+    useEffect(() => {
+        setInterval(() => {
+            const initialViews = Math.floor(Math.random() * (max - min + 1)) + min; // Replace with actual data fetching
+            setVisitorCount(initialViews);
+        }, 4000);
+    }, [])
+
 
     const scrollToSection3 = (e) => {
         e.preventDefault();
@@ -38,14 +51,26 @@ export default function Intro() {
             <br />
             <Link to={"/#order"} onClick={scrollToSection3}>
                 <u>
-                    <span> أطلب الأن من هنا </span>
+                    <span> اطلب الأن من هنا </span>
                 </u>
             </Link>
         </div>
-        <motion.h1 className='text-xl text-center mt-5 font-bold leading-10'
+        <div className="vistor">
+            <h4 className='flex items-center'>
+                <FaEye />
+                <span>
+                    {visitorCount}
+                </span>
+                <span className='flex items-center gap-2'>
+                    يشاهد المنتج الأن</span>
+            </h4>
+        </div>
+
+
+        <motion.h1 className='text-xl text-center mt-5 font-bold leading-6'
             initial={{ opacity: 0 }} animate={InView && { opacity: 1 }} transition={{ type: "spring", duration: "1" }}
             ref={Title}>
-            ليه مجموعة كتب ENGLISHIANO الأكثر مبيعاً في مصر  و الوطن العربي ؟
+            ليه مجموعة كتب ENGLISHIANO الأكثر مبيعاً في مصر  و الوطن العربي؟
         </motion.h1>
 
         <motion.h1 className='text-2xl text-center mt-9' initial={{ opacity: 0, y: 10 }}
