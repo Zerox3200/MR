@@ -72,7 +72,7 @@ export default function ScreenShots() {
             </div> */}
 
 
-        <h1 className='text-center mt-10 opiniosTitle text-2xl'>ENGLISHIANO أراء عملاء</h1>
+        <h1 id='opnion' className='text-center mt-10 opiniosTitle text-2xl'>ENGLISHIANO أراء عملاء</h1>
         <div className="slider-container-screens " >
             <Slider {...settings}>
                 {ScreenImages.map((screens) => <div key={screens.id}>
