@@ -11,6 +11,7 @@
     }
 }
 .offer {
+    background-color: rgba(0, 128, 0, 0.849);
     text-align: center;
     margin-top: 20px;
     padding: 10px;
@@ -20,11 +21,15 @@
     h1 {
         padding: 8px;
         display: inline;
-        color: rgb(94, 88, 88);
+        color: white;
         text-align: center;
     }
     u {
         color: $BaseColor;
+        background-color: white;
+        padding: 8px;
+        border-radius: 5px;
+        margin-bottom: 5px !important;
     }
 }
 .vistor {
