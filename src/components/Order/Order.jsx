@@ -21,14 +21,24 @@ export default function Order() {
 
     return <div className='Order py-6' id='order'>
         <div className='offers-2'>
-            <span className='flex items-center'>
-                <ImCheckmark />الدفع عند الإستلام
-            </span>
-            <span className='flex items-center'>
-                <ImCheckmark />  الشحن مجاني
-            </span>
-            <span className='flex items-center'>
-                <ImCheckmark /> الإجمالي 299
+            <span className='flex items-center justify-center p-7 gap-2'>
+                <span>
+                    <ImCheckmark />
+                    <ImCheckmark />
+                    <ImCheckmark />
+
+                </span>
+                <div>
+                    <span>
+                        الدفع عند الإستلام
+                    </span>
+                    <span>
+                        الشحن مجاني
+                    </span>
+                    <span>
+                        الإجمالي 299
+                    </span>
+                </div>
             </span>
         </div>
 
