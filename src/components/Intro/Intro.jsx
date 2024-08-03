@@ -49,7 +49,6 @@ export default function Intro() {
                 299ج بدلا من  <del>600ج</del> <d>عرض لمدة 24 ساعة</d>  و الشحن مجاناً لأي مكان في مصر
             </h1>
             <br />
-            <br />
             <Link to={"/#order"} onClick={scrollToSection3}>
                 <u>
                     <span className=''> اطلب الأن من هنا </span>
