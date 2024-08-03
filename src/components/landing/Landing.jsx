@@ -23,7 +23,7 @@ export default function Landing() {
     };
     const settings = {
         className: 'slider-book',
-        dots: true,
+        dots: false,
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,

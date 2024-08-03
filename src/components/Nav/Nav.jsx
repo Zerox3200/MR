@@ -55,7 +55,7 @@ export default function Nav({ setScrolled, Scrolled }) {
         <nav className={Scrolled ? "border-gray-200 fixed w-full transition Scrolled" : "border-gray-200 transition"}>
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <div className="flex flex-col justify-center items-center space-x-3 rtl:space-x-reverse">
-                    <h1 className='text-5xl mb-2 font-black text-left'>ENGLISH<span className='text-left text-5xl font-black'>IANO</span></h1>
+                    <h1 className='text-4xl mb-2 font-black text-left'>ENGLISH<span className='text-left text-4xl font-black'>IANO</span></h1>
                     <h1 className='text-2xl text-left font-bold mb-2 logo_name '>AHMED <span>HANADY</span> </h1>
                 </div>
                 <button

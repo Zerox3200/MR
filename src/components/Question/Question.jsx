@@ -22,7 +22,7 @@ export function Question({ number, title, desc, desc1, desc2, desc3, Delay }) {
         }
     }
     return (
-        <motion.div className="Question" ref={ref}
+        <motion.div className="Question mt-5" ref={ref}
             initial={{ opacity: 0, y: 40 }}
             animate={InView && { opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'linear', delay: parseFloat(Delay) }}
