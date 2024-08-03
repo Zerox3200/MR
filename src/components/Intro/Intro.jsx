@@ -46,7 +46,7 @@ export default function Intro() {
     return <div className='mt-6 Intro p-2'>
         <div className="offer">
             <h1>
-              <span className='text-[#e7603e]'>299ج</span>  بدلا من  <del>600ج</del> <d>عرض لمدة 24 ساعة</d>  و الشحن مجاناً لأي مكان في مصر
+                299ج بدلا من  <del>600ج</del> <d>عرض لمدة 24 ساعة</d>  و الشحن مجاناً لأي مكان في مصر
             </h1>
             <br />
             <Link to={"/#order"} onClick={scrollToSection3}>
