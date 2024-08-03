@@ -70,7 +70,7 @@ export default function Nav({ setScrolled, Scrolled }) {
                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
                     </svg>
                 </button>
-                <div className={`${isMenuOpen ? 'block' : 'hidden'} w-full md:block md:w-auto`} id="navbar-default">
+                <div className={`${isMenuOpen ? 'block drop-down' : 'hidden'} w-full md:block md:w-auto`} id="navbar-default">
                     <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg 
                      md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0
                      dark:border-gray-700">

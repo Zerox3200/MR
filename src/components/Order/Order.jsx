@@ -80,11 +80,11 @@ export default function Order() {
                 </div>
 
                 <div>
-                    <label htmlFor="quantity" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">اختر عدد النسخ :</label>
+                    <label htmlFor="quantity" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">:اختر عدد النسخ</label>
                     <input type="number" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500
                      focus:border-blue-500 block w-full p-2.5" id="quantity" name='quantity' min={1} max={5} />
                 </div>
-                <motion.div initial={{ opacity: 0, x: 100 }} animate={InView && { opacity: 1, x: 0 }} transition={{ duration: 0.8, type: "spring", delay: 0.6 }} >
+                <motion.div initial={{ opacity: 0, y: 10 }} animate={InView && { opacity: 1, y: 0 }} transition={{ duration: 0.8, type: "spring", delay: 0.6 }} >
                     <label htmlFor="phone" className="block mb-2 text-sm font-medium text-end text-gray-900 dark:text-white">ملاحظات </label>
                     <Textarea id="comment" dir='rtl' placeholder="لو عندك ملاحظات بخصوص الأوردر من فضلك اكتبها هنا" required rows={4} />
                 </motion.div>

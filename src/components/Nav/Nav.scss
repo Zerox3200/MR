@@ -10,9 +10,7 @@
 }
 
 nav {
-    // background-color: $BaseColor;
-    // border-bottom: solid 1px;
-    background-color: black;
+    background-color: $BaseColor;
     z-index: 999;
     position: fixed;
     top: 23px;
@@ -74,5 +72,9 @@ nav {
                 }
             }
         }
+    }
+    .drop-down {
+        background-color: $BaseColor;
+        margin-top: 11px;
     }
 }
