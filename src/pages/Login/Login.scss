@@ -1,0 +1,18 @@
+@use "../../helpers/_functions.scss" as *;
+.main-form {
+    background-color: white;
+    h1 {
+        color: #1e439fc0;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    form {
+        // background-color:gainsboro;
+        border-radius: 50px 84px / 98px 5px;
+        padding: 35px;
+        width: 90%;
+    }
+}
