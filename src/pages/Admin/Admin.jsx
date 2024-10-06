@@ -64,15 +64,15 @@ export default function Orders() {
   return (
     <div className='mainOfOrders'>
       <h1>Orders</h1>
-      
+
       <label htmlFor="datePicker">Choose Date: </label>
-      <input 
-        type="date" 
-        id="datePicker" 
-        value={selectedDate} 
-        onChange={handleDateChange} 
+      <input
+        type="date"
+        id="datePicker"
+        value={selectedDate}
+        onChange={handleDateChange}
       />
-      
+
       <button onClick={downloadExcel} disabled={!selectedDate}>
         Download Orders for {selectedDate}
       </button>

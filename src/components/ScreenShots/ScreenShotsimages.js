@@ -48,8 +48,15 @@ import Screen47 from '../../Assets/IMG-20240716-WA0023.jpg'
 import Screen48 from '../../Assets/IMG-20240716-WA0024.jpg'
 import Screen49 from '../../Assets/IMG-20240716-WA0025.jpg'
 import Screen50 from '../../Assets/IMG-20240716-WA0026.jpg'
-// import Screen51 from '../../Assets/IMG-20240716-WA0027.jpg'
-// import Screen52 from '../../Assets/IMG-20240716-WA0028.jpg'
+import Screen51 from '../../Assets/newop/IMG-20241006-WA0001.jpg'
+import Screen52 from '../../Assets/newop/IMG-20241006-WA0003.jpg'
+import Screen53 from '../../Assets/newop/IMG-20241006-WA0004.jpg'
+import Screen54 from '../../Assets/newop/IMG-20241006-WA0005.jpg'
+import Screen55 from '../../Assets/newop/IMG-20241006-WA0006.jpg'
+import Screen56 from '../../Assets/newop/IMG-20241006-WA0007.jpg'
+import Screen57 from '../../Assets/newop/IMG-20241006-WA0008.jpg'
+import Screen58 from '../../Assets/newop/WhatsApp Image 2024-10-06 at 22.03.52_dd350074.jpg'
+import Screen59 from '../../Assets/newop/IMG-20241006-WA0002.jpg'
 
 export const ScreenImages = [
   { id: 1, screen: Screen1 },
@@ -102,7 +109,16 @@ export const ScreenImages = [
   { id: 48, screen: Screen48 },
   { id: 49, screen: Screen49 },
   { id: 50, screen: Screen50 },
-  //   { id: 51, screen: Screen51 },
-  //   { id: 52, screen: Screen52 }
+  
+  { id: 51, screen: Screen51 },
+  { id: 52, screen: Screen52 },
+  { id: 52, screen: Screen53 },
+  { id: 53, screen: Screen54 },
+  { id: 54, screen: Screen55 },
+  { id: 55, screen: Screen55 },
+  { id: 56, screen: Screen56 },
+  { id: 57, screen: Screen57 },
+  { id: 58, screen: Screen58 },
+  { id: 59, screen: Screen59 },
 
 ]
