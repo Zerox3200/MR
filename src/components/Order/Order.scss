@@ -11,12 +11,11 @@
         margin-bottom: 10px;
         background-color: white;
         border-radius: 50px;
+
         @include Breakpoints(mobile) {
             width: 90%;
         }
         span {
-            direction: rtl !important;
-            justify-content: center;
             color: green;
         }
     }

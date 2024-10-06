@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import './Oreder.scss';
+import './Order.scss';
 import { useFormik } from 'formik';
 import { useInView, motion } from 'framer-motion';
 import { Textarea } from 'flowbite-react';
@@ -62,18 +62,26 @@ export default function Order() {
     return (
         <div className='Order py-6' id='order'>
             <div className='offers-2'>
-                <span className='flex items-center justify-center p-7 gap-2'>
+                <div className='flex items-center justify-center gap-4'>
+                    <span>الدفع عند الإستلام</span>
                     <span>
                         <ImCheckmark />
-                        <ImCheckmark />
+                    </span>
+                </div>
+
+                <div className='flex items-center justify-center gap-4'>
+                    <span>الإجمالي 299</span>
+                    <span>
                         <ImCheckmark />
                     </span>
-                    <div>
-                        <span>الدفع عند الإستلام</span>
-                        <span>الشحن مجاني</span>
-                        <span>الإجمالي 299</span>
-                    </div>
-                </span>
+                </div>
+
+                <div className='flex items-center justify-center gap-4'>
+                    <span>الشحن مجاني</span>
+                    <span>
+                        <ImCheckmark />
+                    </span>
+                </div>
             </div>
 
             <h1 className='text-2xl text-center'>اطلب الأن من هنا</h1>
@@ -166,7 +174,6 @@ export default function Order() {
                             name='secondPhone'
                             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                             placeholder="رقم تليفون اخر"
-                            required
                             initial={{ opacity: 0, y: 10 }}
                             animate={inView && { opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, type: "spring", delay: 0.4 }}
