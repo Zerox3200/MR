@@ -11,7 +11,21 @@
         margin-bottom: 10px;
         background-color: white;
         border-radius: 50px;
+        .text-ofer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
 
+            .span1 {
+                width: 80%;
+                text-align: end;
+                margin: 2px;
+            }
+            .span2 {
+                width: 20%;
+            }
+        }
         @include Breakpoints(mobile) {
             width: 90%;
         }

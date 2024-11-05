@@ -11,7 +11,15 @@ const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
     <App />
-    <Toaster position='top-left' reverseOrder={false} />
+    <Toaster toastOptions={{
+ style: {
+ width: '100%',
+ height: '60px',
+ backgroundColor: '#E7603E',
+ color: '#ffff',
+ borderRadius: '8px'
+ }
+ }} position='botom-center' />
   </React.StrictMode>
 )
 
