@@ -52,14 +52,37 @@ export default function Orders() {
       return;
     }
 
-    const worksheet = XLSX.utils.json_to_sheet(orders);
+    // Define custom headers (adjust these to match your data fields)
+    const headers = [["رقم الأوردر", "الأسم ", "العنوان ", "البلد", "رقم التليفون", "رقم التليفون الثاني ", "عدد الكتب", "الملاحظات", "التاريخ"]];
+
+    // Define the keys that correspond to your headers in each order object
+    const fieldsToExport = ["_id", "name", "adress", "country", "phone", "secondPhone", "numberOfbooks", "comments", "date"];
+
+    // Filter orders to include only the specified fields
+    const filteredOrders = orders.map(order => {
+      let filteredOrder = {};
+      fieldsToExport.forEach((field, index) => {
+        filteredOrder[headers[0][index]] = order[field]; // Map each field to its header
+      });
+      return filteredOrder;
+    });
+
+    // Convert the filtered data to a worksheet
+    const worksheet = XLSX.utils.json_to_sheet(filteredOrders);
+
+    // Add headers to the worksheet at the beginning
+    XLSX.utils.sheet_add_aoa(worksheet, headers, { origin: "A1" });
+
+    // Create a new workbook and add the worksheet to it
     const workbook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(workbook, worksheet, `Orders_${selectedDate}`);
 
+    // Generate a buffer for the workbook and create a Blob to trigger download
     const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
     const data = new Blob([excelBuffer], { type: 'application/octet-stream' });
     saveAs(data, `Orders_${selectedDate}.xlsx`);
   };
+
 
   return (
     <div className='mainOfOrders'>
@@ -73,8 +96,9 @@ export default function Orders() {
         onChange={handleDateChange}
       />
 
-      <button onClick={downloadExcel} disabled={!selectedDate}>
-        Download Orders for {selectedDate}
+      <button className='order-button' onClick={downloadExcel} disabled={!selectedDate}>
+        Download Orders
+        {/* for {selectedDate} */}
       </button>
 
       {Object.entries(groupedOrders).map(([date, orders]) => (
@@ -83,7 +107,7 @@ export default function Orders() {
           {orders.map((order, index) => (
             <table key={index} className='orderTable'>
               <tr>
-                <th>Name</th>
+                <th>الأسم</th>
                 <td>{order.name}</td>
               </tr>
               <tr>

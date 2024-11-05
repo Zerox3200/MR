@@ -32,7 +32,7 @@ export default function Login() {
 
     let validationSchema = Yup.object({
         email: Yup.string().required("Email is required").email('Invalid email'),
-        password: Yup.string().required("Password is required").matches(/^[A-Z][\w @]{5,8}$/, "Invalid password ex(Ahmed123)"),
+        password: Yup.string().required("Password is required"),
     })
 
     const formik = useFormik({

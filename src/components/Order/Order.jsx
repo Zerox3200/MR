@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import './Order.scss';
-import { useFormik } from 'formik';
+import { Formik, useFormik } from 'formik';
 import { useInView, motion } from 'framer-motion';
 import { Textarea } from 'flowbite-react';
 import { ImCheckmark } from "react-icons/im";
@@ -20,11 +20,12 @@ export default function Order() {
         console.log(val);
         setLoading(true);
         try {
-            const { data } = await axios.post(`http://localhost:3000/order/placeorder`, val);
+            const { data } = await axios.post(`${BaseUrl}/order/placeorder`, val);
             if (data.message === "success") {
                 toast.success('تم طلب الأوردر بنجاح');
+                formik.resetForm()
             } else {
-                setApiError("Failed to place order");
+                setApiError("لقد فشل طلبك#E7603E");
             }
         } catch (error) {
             setApiError("An error occurred while placing the order");
@@ -62,23 +63,23 @@ export default function Order() {
     return (
         <div className='Order py-6' id='order'>
             <div className='offers-2'>
-                <div className='flex items-center justify-center gap-4'>
-                    <span>الدفع عند الإستلام</span>
-                    <span>
+                <div className=' text-ofer'>
+                    <span className='span1'>الدفع عند الإستلام</span>
+                    <span className='span2'>
                         <ImCheckmark />
                     </span>
                 </div>
 
-                <div className='flex items-center justify-center gap-4'>
-                    <span>الإجمالي 299</span>
-                    <span>
+                <div className=' text-ofer'>
+                    <span className='span1'>الإجمالي 299</span>
+                    <span className='span2'>
                         <ImCheckmark />
                     </span>
                 </div>
 
-                <div className='flex items-center justify-center gap-4'>
-                    <span>الشحن مجاني</span>
-                    <span>
+                <div className=' text-ofer'>
+                    <span className='span1'>الشحن مجاني</span>
+                    <span className='span2'>
                         <ImCheckmark />
                     </span>
                 </div>
@@ -103,6 +104,7 @@ export default function Order() {
                             initial={{ opacity: 0, y: 10 }}
                             animate={inView && { opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, type: "spring" }}
+                            value={formik.values.name}
                         />
                         {formik.errors.name && formik.touched.name && <div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400">{formik.errors.name}</div>}
                     </div>
@@ -122,6 +124,7 @@ export default function Order() {
                                 name='adress'
                                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                 placeholder="اكتب عنوانك هنا بالتفصيل مع ذكر المحافظة - اسم المنطقة - اسم الشارع - رقم العمارة - علامة مميزة إن وُجِد"
+                                value={formik.values.adress}
                             />
                         </motion.div>
                         {formik.errors.adress && formik.touched.adress && <div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400">{formik.errors.adress}</div>}
@@ -142,6 +145,7 @@ export default function Order() {
                             transition={{ duration: 0.8, type: "spring", delay: 0.3 }}
                             onBlur={formik.handleBlur}
                             onChange={formik.handleChange}
+                            value={formik.values.country}
                         />
                         {formik.errors.country && formik.touched.country && <div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400">{formik.errors.country}</div>}
                     </div>
@@ -161,6 +165,7 @@ export default function Order() {
                             transition={{ duration: 0.8, type: "spring", delay: 0.4 }}
                             onBlur={formik.handleBlur}
                             onChange={formik.handleChange}
+                            value={formik.values.phone}
                         />
                         {formik.errors.phone && formik.touched.phone && <div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400">{formik.errors.phone}</div>}
                     </div>
@@ -179,6 +184,7 @@ export default function Order() {
                             transition={{ duration: 0.8, type: "spring", delay: 0.4 }}
                             onBlur={formik.handleBlur}
                             onChange={formik.handleChange}
+                            value={formik.values.secondPhone}
                         />
                         {formik.errors.secondPhone && formik.touched.secondPhone && <div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400">{formik.errors.secondPhone}</div>}
                     </div>
@@ -192,6 +198,7 @@ export default function Order() {
                             name='numberOfbooks'
                             onBlur={formik.handleBlur}
                             onChange={formik.handleChange}
+                            value={formik.values.numberOfbooks}
                         />
                         {formik.errors.numberOfbooks && formik.touched.numberOfbooks && <div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400">{formik.errors.numberOfbooks}</div>}
                     </div>
@@ -206,6 +213,7 @@ export default function Order() {
                             rows={4}
                             onBlur={formik.handleBlur}
                             onChange={formik.handleChange}
+                            value={formik.values.comments}
                         />
                         {formik.errors.comments && formik.touched.comments && <div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400">{formik.errors.comments}</div>}
                     </motion.div>
